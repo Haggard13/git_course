@@ -11,7 +11,7 @@ class Main(Frame):
         self.lbl = Label(text=self.formula, font=("Times New Roman", 21, "bold"), bg="#000", foreground="#FFF")
         self.lbl.place(x=11, y=50)
 
-        btns = [
+        buttons = [
             "C", "DEL", "*", "=",
             "1", "2", "3", "/",
             "4", "5", "6", "+",
@@ -21,7 +21,7 @@ class Main(Frame):
 
         x = 10
         y = 140
-        for bt in btns:
+        for bt in buttons:
             com = lambda x=bt: self.logicalc(x)
             Button(text=bt, bg="#FFF",
                    font=("Times New Roman", 15),
@@ -39,7 +39,7 @@ class Main(Frame):
         elif operation == "DEL":
             self.formula = self.formula[0:-1]
         elif operation == "X^2":
-            self.formula = str((eval(self.formula))**2)
+            self.formula = str((eval(self.formula)) ** 2)
         elif operation == "=":
             self.formula = str(eval(self.formula))
         else:
